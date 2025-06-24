@@ -74,8 +74,7 @@ resource "aws_servicecatalog_constraint" "launch_constraint" {
   portfolio_id = aws_servicecatalog_portfolio.this.id
   product_id   = aws_servicecatalog_product.this.id
   type         = "LAUNCH"
-  role_arn     = 
-   parameters   = jsonencode({ RoleArn = aws_iam_role.launch_role.arn })
+  parameters   = jsonencode({ RoleArn = aws_iam_role.launch_role.arn })
 }
 
 resource "aws_servicecatalog_tag_option" "this" {
