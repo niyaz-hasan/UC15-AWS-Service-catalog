@@ -1,6 +1,6 @@
-module "iam" {
-  source = "./modules/iam"
-}
+#module "iam" {
+#  source = "./modules/iam"
+#}
 
 
 module "instance_catalog" {
@@ -11,7 +11,7 @@ module "instance_catalog" {
   provider_name                  = var.provider_name
   product_name                   = var.product_name
   product_owner                  = var.product_owner
-  launch_role_arn                = module.iam.launch_role_role_arn
+#  launch_role_arn                = module.iam.launch_role_role_arn
   template_url                   = var.template_url
   provisioning_name              = var.provisioning_name
   template_constraint_parameters = var.template_constraint_parameters
