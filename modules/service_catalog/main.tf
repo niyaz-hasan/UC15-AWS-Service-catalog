@@ -13,8 +13,6 @@ resource "aws_iam_role" "launch_role" {
       }
     ]
   })
-
-  tags = var.tags
 }
 
 resource "aws_iam_policy" "servicecatalog_policy" {
@@ -76,7 +74,8 @@ resource "aws_servicecatalog_constraint" "launch_constraint" {
   portfolio_id = aws_servicecatalog_portfolio.this.id
   product_id   = aws_servicecatalog_product.this.id
   type         = "LAUNCH"
-  role_arn     = aws_iam_role.launch_role.arn
+  role_arn     = 
+   parameters   = jsonencode({ RoleArn = aws_iam_role.launch_role.arn })
 }
 
 resource "aws_servicecatalog_tag_option" "this" {
@@ -93,10 +92,4 @@ resource "aws_servicecatalog_principal_portfolio_association" "this" {
   portfolio_id   = aws_servicecatalog_portfolio.this.id
   principal_arn  = var.user_arn
   principal_type = "IAM"
-}
-
-
-resource "aws_servicecatalog_launch_path" "this" {
-  portfolio_id = aws_servicecatalog_portfolio.this.id
-  product_id   = aws_servicecatalog_product.this.id
 }
