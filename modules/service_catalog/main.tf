@@ -36,10 +36,10 @@
 #  })
 #}
 
-resource "aws_iam_role_policy_attachment" "attach_policy" {
-  role       = aws_iam_role.launch_role.name
-  policy_arn = aws_iam_policy.servicecatalog_policy.arn
-}
+#resource "aws_iam_role_policy_attachment" "attach_policy" {
+#  role       = aws_iam_role.launch_role.name
+#  policy_arn = aws_iam_policy.servicecatalog_policy.arn
+#}
 
 resource "aws_servicecatalog_portfolio" "this" {
   name          = var.portfolio_name
