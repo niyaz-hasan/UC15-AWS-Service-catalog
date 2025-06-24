@@ -8,5 +8,6 @@ variable "provisioning_name" {}
 variable "template_constraint_parameters" {}
 variable "tag_key" {}
 variable "tag_value" {}
+variable "launch_role_arn" {}
 variable "user_arn" {}
 variable "region" {}

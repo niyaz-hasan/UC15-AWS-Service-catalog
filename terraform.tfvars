@@ -16,7 +16,7 @@ template_constraint_parameters = {
       }
     }
 }
-
+launch_role_arn          = "arn:aws:iam::975049998898:role/servicecatalogaccesss"
 tag_key                  = "env"
 tag_value                = "dev"
 region                   = "us-east-1"

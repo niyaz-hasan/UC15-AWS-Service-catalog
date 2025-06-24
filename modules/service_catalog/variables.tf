@@ -59,5 +59,11 @@ variable "user_arn" {
   type        = string
 }
 
+variable "launch_role_arn" {
+  description = "IAM role ARN to be used for product launch"
+  type        = string
+  default     = ""
+}
+
 #variable "launch_role_arn"{
 #}
