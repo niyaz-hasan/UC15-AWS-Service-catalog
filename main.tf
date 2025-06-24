@@ -1,5 +1,5 @@
 module "iam" {
-  source = "./module/iam"
+  source = "./modules/iam"
 }
 
 
