@@ -9,7 +9,6 @@ module "instance_catalog" {
   template_url                   = var.template_url
   provisioning_name              = var.provisioning_name
   template_constraint_parameters = var.template_constraint_parameters
-  launch_role_arn                = var.launch_role_arn
   tag_key                        = var.tag_key
   tag_value                      = var.tag_value
   user_arn                       = var.user_arn

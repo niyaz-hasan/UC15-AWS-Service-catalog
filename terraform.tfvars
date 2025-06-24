@@ -6,8 +6,6 @@ product_name           = "instance Product"
 product_owner          = "niyaz"
 template_url           = "https://demotestbucketforservicecatalog.s3.us-east-1.amazonaws.com/ec2_instance.yml"
 provisioning_name      = "v1"
-
-enable_template_constraint = true
 template_constraint_parameters = {
   Rules = {
       AllowedInstanceTypes = {
@@ -19,8 +17,6 @@ template_constraint_parameters = {
     }
 }
 
-enable_launch_constraint = true
-create_tag_option        = true
 tag_key                  = "env"
 tag_value                = "dev"
 
