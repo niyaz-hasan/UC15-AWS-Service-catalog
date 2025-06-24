@@ -59,5 +59,5 @@ variable "user_arn" {
   type        = string
 }
 
-variable "launch_role_arn"{
-}
+#variable "launch_role_arn"{
+#}
