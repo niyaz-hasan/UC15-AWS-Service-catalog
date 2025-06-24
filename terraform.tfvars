@@ -19,5 +19,5 @@ template_constraint_parameters = {
 
 tag_key                  = "env"
 tag_value                = "dev"
-
+region                   = "us-east-1"
 user_arn                 = "arn:aws:iam::975049998898:user/service-usr"

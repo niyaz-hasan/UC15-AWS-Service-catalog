@@ -9,3 +9,4 @@ variable "template_constraint_parameters" {}
 variable "tag_key" {}
 variable "tag_value" {}
 variable "user_arn" {}
+variable "region" {}
