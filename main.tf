@@ -1,5 +1,5 @@
 module "s3_catalog" {
-  source = "../modules/service_catalog"
+  source = "./modules/service_catalog"
 
   portfolio_name                 = var.portfolio_name
   portfolio_description          = var.portfolio_description
