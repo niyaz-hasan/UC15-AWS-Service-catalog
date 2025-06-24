@@ -58,3 +58,6 @@ variable "user_arn" {
   description = "IAM principal ARN to associate with the portfolio"
   type        = string
 }
+
+variable "launch_role_arn"{
+}
