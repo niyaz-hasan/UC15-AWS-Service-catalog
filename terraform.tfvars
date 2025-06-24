@@ -20,8 +20,6 @@ template_constraint_parameters = {
 }
 
 enable_launch_constraint = true
-#launch_role_arn          = "arn:aws:iam::676206899900:role/servicecatalogaccesss"
-
 create_tag_option        = true
 tag_key                  = "env"
 tag_value                = "dev"
