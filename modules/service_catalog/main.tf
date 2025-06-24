@@ -71,18 +71,33 @@ resource "aws_servicecatalog_constraint" "template_constraint" {
   parameters   = jsonencode(var.template_constraint_parameters)
 }
 
+#resource "aws_servicecatalog_constraint" "launch_constraint" {
+#  portfolio_id = aws_servicecatalog_portfolio.this.id
+#  product_id   = aws_servicecatalog_product.this.id
+#  type         = "LAUNCH"
+#  parameters   = jsonencode({ RoleArn = aws_iam_role.launch_role.arn })
+#
+#  depends_on = [
+#    aws_iam_role.launch_role,
+#    aws_iam_role_policy_attachment.attach_policy
+#  ]
+#}
+
 resource "aws_servicecatalog_constraint" "launch_constraint" {
   portfolio_id = aws_servicecatalog_portfolio.this.id
   product_id   = aws_servicecatalog_product.this.id
   type         = "LAUNCH"
-  parameters   = jsonencode({ RoleArn = aws_iam_role.launch_role.arn })
-    
-  depends_on = [
-    aws_iam_role.launch_role,
-    aws_iam_role_policy_attachment.attach_policy
-  ]
 
+  parameters = jsonencode({
+    RoleArn = aws_iam_role.launch_role.arn
+  })
+
+  depends_on = [
+    aws_iam_role.launch_role,
+    aws_iam_role_policy_attachment.attach_policy
+  ]
 }
+
 
 resource "aws_servicecatalog_tag_option" "this" {
   key   = var.tag_key
