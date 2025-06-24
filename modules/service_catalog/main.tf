@@ -27,6 +27,7 @@ resource "aws_iam_policy" "servicecatalog_policy" {
           "ec2:RunInstances",
           "ec2:DescribeInstances",
           "ssm:GetParameters",
+          "s3:GetObject",
           "cloudformation:*"
         ],
         Resource = "*"
