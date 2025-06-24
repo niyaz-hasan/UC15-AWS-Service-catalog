@@ -1,0 +1,11 @@
+variable "portfolio_name" {}
+variable "portfolio_description" {}
+variable "provider_name" {}
+variable "product_name" {}
+variable "product_owner" {}
+variable "template_url" {}
+variable "provisioning_name" {}
+variable "template_constraint_parameters" {}
+variable "tag_key" {}
+variable "tag_value" {}
+variable "user_arn" {}
