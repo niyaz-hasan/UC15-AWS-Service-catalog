@@ -91,11 +91,6 @@ resource "aws_servicecatalog_constraint" "launch_constraint" {
   parameters = jsonencode({
     RoleArn = var.launch_role_arn
   })
-
-  depends_on = [
-    aws_iam_role.launch_role,
-    aws_iam_role_policy_attachment.attach_policy
-  ]
 }
 
 
